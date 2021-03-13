@@ -26,7 +26,7 @@ module.exports = {
         // library: 'myfirstlibrary',
         
     },
-    devServer: {
+    devServer: {  // it keeps in memory in ram
         port: 1234,
         contentBase: path.join(__dirname, 'dist')
     }
