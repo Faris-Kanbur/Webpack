@@ -20,7 +20,7 @@ module.exports = {
         
         path: path.resolve(__dirname, 'build'),
         // filename: 'build.js'
-        filename: 'js/main.js', // [name].[hash]
+        filename: 'js/main.[hash]js', // [name].[hash]
         publicPath: '/assets/',
         // libraryTarget : 'amd',  // var-amd-commonjs-
         // library: 'myfirstlibrary',
@@ -28,7 +28,8 @@ module.exports = {
     },
     devServer: {  // it keeps in memory in ram
         port: 1234,
-        contentBase: path.join(__dirname, 'dist')
+        contentBase: path.join(__dirname, 'dist'),
+        writeToDisk: false // if you want to see what is write on the disk you can write like that because as defalt is is false
     }
 
     
