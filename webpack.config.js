@@ -12,7 +12,7 @@ const path = require('path')
 module.exports = {
     mode: "development",
     entry: {
-        myfile: "./src/index.js"
+        myfile: "./src/engine.js"
     },
     output: {
         // filename: 'build.js' if we write like this it is going to create file in dist
@@ -20,11 +20,15 @@ module.exports = {
         
         path: path.resolve(__dirname, 'build'),
         // filename: 'build.js'
-        filename: 'js/[name].[contenthash].build.js',
+        filename: 'js/main.js', // [name].[hash]
         publicPath: '/assets/',
         // libraryTarget : 'amd',  // var-amd-commonjs-
         // library: 'myfirstlibrary',
-    
+        
+    },
+    devServer: {
+        port: 1234,
+        contentBase: path.join(__dirname, 'dist')
     }
 
     
